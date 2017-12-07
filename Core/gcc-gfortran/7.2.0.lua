@@ -1,4 +1,4 @@
--- stub routine for gcc-gfortran 6.4.0 --
+-- stub routine for gcc-gfortran 7.2.0 --
 -- built with:
 -- First in the source, run edit ./contrib/download_prerequisites and change wget to curl -O
 -- Next, run contrib/download_prerequisites
@@ -6,19 +6,19 @@
 --
 -- Then, in a build directory:
 --
--- ../gcc-6.4.0/configure --prefix=/Users/mathomp4/installed/Core/gcc-gfortran/6.4.0 --enable-languages=c,c++,fortran --disable-multilib | & tee configure.log
+-- ../gcc-7.2.0/configure --prefix=/Users/mathomp4/installed/Core/gcc-gfortran/7.2.0 --enable-languages=c,c++,fortran --disable-multilib | & tee configure.log
 --
 
 family("Compiler")
 
-local version = "6.4.0"
+local version = "7.2.0"
 local installdir = "/Users/mathomp4/installed/Core/gcc-gfortran"
 local pkgdir = pathJoin(installdir,version)
 local bindir = pathJoin(pkgdir,"bin")
 
 -- Setup Modulepath for packages built by this compiler
 local mroot = os.getenv("MODULEPATH_ROOT")
-local mdir  = pathJoin(mroot,"Compiler/gcc-gfortran-6.4.0")
+local mdir  = pathJoin(mroot,"Compiler/gcc-gfortran-7.2.0")
 prepend_path("MODULEPATH", mdir)
 
 setenv("CC",pathJoin(bindir,"gcc"))
