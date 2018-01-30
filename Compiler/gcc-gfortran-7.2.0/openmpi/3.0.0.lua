@@ -30,6 +30,7 @@ setenv("TMPDIR","/tmp")
 
 prepend_path("PATH",pathJoin(pkgdir,"bin"))
 prepend_path("LD_LIBRARY_PATH",pathJoin(pkgdir,"lib"))
+prepend_path("DYLD_LIBRARY_PATH",pathJoin(pkgdir,"lib"))
 prepend_path("LIBRARY_PATH",pathJoin(pkgdir,"lib"))
 prepend_path("INCLUDE",pathJoin(pkgdir,"include"))
 prepend_path("MANPATH",pathJoin(pkgdir,"share/man"))

@@ -27,5 +27,6 @@ setenv("BASEBIN",pathJoin(pkgdir,"Darwin/bin"))
 
 prepend_path("PATH",pathJoin(pkgdir,"Darwin/bin"))
 prepend_path("LD_LIBRARY_PATH",pathJoin(pkgdir,"Darwin/lib"))
+prepend_path("DYLD_LIBRARY_PATH",pathJoin(pkgdir,"Darwin/lib"))
 prepend_path("MANPATH",pathJoin(pkgdir,"Darwin/share/man"))
 
