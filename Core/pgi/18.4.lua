@@ -2,7 +2,7 @@
 -- stub routine for pgi 18.4 --
 --
 
-family("Compiler")
+-- family("Compiler")
 
 local version = "18.4"
 --local installdir = "/Users/mathomp4/installed/Core/pgi"
