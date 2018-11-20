@@ -1,7 +1,7 @@
 -- [[
 --
 -- This was built using:
--- $ ./configure --disable-wrapper-rpath --disable-wrapper-runpath CC=gcc CXX=g++ FC=gfortran --without-verbs --prefix=/Users/mathomp4/installed/Compiler/gcc-gfortran-8.2.0/openmpi/3.1.1 | & tee configure.gcc-gfortran-8.2.0.log
+-- $ ./configure --disable-wrapper-rpath --disable-wrapper-runpath CC=gcc CXX=g++ FC=gfortran --prefix=/Users/mathomp4/installed/Compiler/gcc-gfortran-8.2.0/openmpi/3.1.2 | & tee configure.gcc-gfortran-8.2.0.log
 -- $ mv config.log config.gcc-gfortran-8.2.0.log
 -- $ make -j4 |& tee make.gcc-gfortran-8.2.0.log
 -- $ make install |& tee makeinstall.gcc-gfortran-8.2.0.log
@@ -14,7 +14,7 @@ prereq("gcc-gfortran/8.2.0")
 
 local compilername = "gcc-gfortran-8.2.0"
 
-local version = "3.1.1"
+local version = "3.1.2"
 local compiler = pathJoin("Compiler",compilername)
 local homedir = os.getenv("HOME")
 local installdir = pathJoin(homedir,"installed")
