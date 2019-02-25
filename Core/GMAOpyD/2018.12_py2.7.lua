@@ -1,6 +1,6 @@
--- File for anaconda
+-- File for GEOSpyD
 --
--- Installed using the Anaconda2 installer script on github:
+-- Installed using the Anaconda installer script on github:
 --
 --   git@github.com:mathomp4/anaconda.git
 --
@@ -8,18 +8,19 @@
 family("Python")
 
 local homedir = os.getenv("HOME")
-local installdir = pathJoin(homedir,"anaconda")
+local installdir = pathJoin(homedir,"GEOSpyD")
 
-local anaconda_version = "5.3.1"
-local python_version = "3.7"
-local builddate = "2018-12-06"
+local anaconda_version = "2018.12"
+local python_version = "2.7"
+local geospyd_version = anaconda_version .. "_py" .. python_version
+local builddate = "2019-02-25"
 
-local pathdir = pathJoin(anaconda_version,python_version,builddate)
+local pathdir = pathJoin(geospyd_version,builddate)
 local pkgdir = pathJoin(installdir,pathdir)
 
 -- Setup Modulepath for packages built by this compiler
 local mroot = os.getenv("MODULEPATH_ROOT")
-local mdir  = pathJoin(mroot,"Python/Anaconda3-5.3.1")
+local mdir  = pathJoin(mroot,"Python/GEOSpyD",geospyd_version)
 prepend_path("MODULEPATH", mdir)
 
 unsetenv("ESMA_F2PY")
