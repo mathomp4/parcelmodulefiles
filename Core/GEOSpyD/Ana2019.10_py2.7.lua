@@ -11,9 +11,9 @@ local homedir = os.getenv("HOME")
 local installdir = pathJoin(homedir,"GEOSpyD")
 
 local anaconda_version = "2019.10"
-local python_version = "3.7"
+local python_version = "2.7"
 local geospyd_version = anaconda_version .. "_py" .. python_version
-local builddate = "2019-11-04"
+local builddate = "2020-02-13"
 
 local pathdir = pathJoin(geospyd_version,builddate)
 local pkgdir = pathJoin(installdir,pathdir)
