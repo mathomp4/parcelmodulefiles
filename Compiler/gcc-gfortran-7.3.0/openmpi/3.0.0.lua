@@ -1,6 +1,6 @@
 -- [[
 -- This was built using:
--- $ ./configure --disable-wrapper-rpath CC=gcc CXX=g++ FC=gfortran --without-verbs --prefix=/Users/mathomp4/installed/Compiler/gcc-gfortran-7.3.0/openmpi/3.0.0 | & tee configure.gcc-gfortran-7.3.0.log
+-- $ ./configure --disable-wrapper-rpath CC=gcc CXX=g++ FC=gfortran --without-verbs --prefix=$HOME/installed/Compiler/gcc-gfortran-7.3.0/openmpi/3.0.0 | & tee configure.gcc-gfortran-7.3.0.log
 --
 -- ]]
 

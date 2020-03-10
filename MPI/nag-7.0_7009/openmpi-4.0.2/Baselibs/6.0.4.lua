@@ -1,7 +1,7 @@
 -- [[
 --
 -- This was built using:
--- $ make -j4 install ESMF_COMM=openmpi ESMF_COMPILER=nag prefix=/Users/mathomp4/installed/MPI/nag-7.0_7009/openmpi-4.0.2/Baselibs/6.0.4/Darwin |& tee makeinstall.nag-7.0_7009_openmpi-4.0.2.log
+-- $ make -j4 install ESMF_COMM=openmpi ESMF_COMPILER=nag prefix=$HOME/installed/MPI/nag-7.0_7009/openmpi-4.0.2/Baselibs/6.0.4/Darwin |& tee makeinstall.nag-7.0_7009_openmpi-4.0.2.log
 --
 -- ]]
 

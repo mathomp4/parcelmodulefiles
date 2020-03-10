@@ -4,6 +4,8 @@
 
 family("Compiler")
 
+local homedir = os.getenv("HOME")
+
 local nag_pkgdir = "/opt/nag/"
 local nag_bindir = pathJoin(nag_pkgdir,"bin")
 local nag_libdir = pathJoin(nag_pkgdir,"lib")
@@ -11,7 +13,7 @@ local nag_mandir = pathJoin(nag_pkgdir,"man")
 -- local nag_incdir = pathJoin(nag_pkgdir,"lib/NAG_Fortran")
 
 local gcc_version = "8.2.0"
-local gcc_installdir = "/Users/mathomp4/installed/Core/gcc-gfortran"
+local gcc_installdir = pathJoin(homedir,"installed/Core/gcc-gfortran")
 local gcc_pkgdir = pathJoin(gcc_installdir,gcc_version)
 local gcc_bindir = pathJoin(gcc_pkgdir,"bin")
 local gcc_libdir = pathJoin(gcc_pkgdir,"lib")

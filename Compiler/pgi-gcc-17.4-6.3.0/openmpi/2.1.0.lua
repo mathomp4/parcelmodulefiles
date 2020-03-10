@@ -1,6 +1,6 @@
 -- [[
 -- This was built using:
--- $ ./configure --disable-wrapper-rpath CC=gcc CXX=g++ FC=pgfortran --without-verbs --prefix=/Users/mathomp4/installed/Compiler/pgi-gcc-17.4-6.3.0/openmpi/2.1.0 | & tee configure.pgi-gcc-17.4-6.3.0.log
+-- $ ./configure --disable-wrapper-rpath CC=gcc CXX=g++ FC=pgfortran --without-verbs --prefix=$HOME/installed/Compiler/pgi-gcc-17.4-6.3.0/openmpi/2.1.0 | & tee configure.pgi-gcc-17.4-6.3.0.log
 --
 -- ]]
 

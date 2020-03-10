@@ -1,7 +1,7 @@
 -- [[
 --
 -- This was built using:
--- $ ./configure --disable-wrapper-rpath --disable-wrapper-runpath --enable-mpi1-compatibility CC=gcc CXX=g++ FC=gfortran --prefix=/Users/mathomp4/installed/Compiler/gcc-gfortran-9.2.0/openmpi/4.0.1-MPI1 |& tee configure.gcc-gfortran-9.2.0-MPI1.log
+-- $ ./configure --disable-wrapper-rpath --disable-wrapper-runpath --enable-mpi1-compatibility CC=gcc CXX=g++ FC=gfortran --prefix=$HOME/installed/Compiler/gcc-gfortran-9.2.0/openmpi/4.0.1-MPI1 |& tee configure.gcc-gfortran-9.2.0-MPI1.log
 -- $ mv config.log config.gcc-gfortran-9.2.0-MPI1.log
 -- $ make -j4 |& tee make.gcc-gfortran-9.2.0-MPI1.log
 -- $ make install |& tee makeinstall.gcc-gfortran-9.2.0-MPI1.log

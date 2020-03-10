@@ -1,7 +1,7 @@
 -- [[
 --
 -- This was built using:
--- $ ./configure --disable-wrapper-rpath --disable-wrapper-runpath FCFLAGS"=-mismatch_all -fpp" CC=gcc CXX=g++ FC=nagfor --prefix=/Users/mathomp4/installed/Compiler/nag-7.0_7009/openmpi/4.0.2 |& tee configure.nag-7.0_7009.log
+-- $ ./configure --disable-wrapper-rpath --disable-wrapper-runpath FCFLAGS"=-mismatch_all -fpp" CC=gcc CXX=g++ FC=nagfor --prefix=$HOME/installed/Compiler/nag-7.0_7009/openmpi/4.0.2 |& tee configure.nag-7.0_7009.log
 -- $ mv config.log config.nag-7.0_7009.log
 -- $ make -j4 |& tee make.nag-7.0_7009.log
 -- $ make install |& tee makeinstall.nag-7.0_7009.log

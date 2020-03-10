@@ -6,7 +6,7 @@
 --
 -- Then, in a build directory:
 --
--- ../gcc-8.3.0/configure --prefix=/Users/mathomp4/installed/Core/gcc-gfortran/8.3.0 --enable-languages=c,c++,fortran --disable-multilib |& tee configure.log
+-- ../gcc-8.3.0/configure --prefix=$HOME/installed/Core/gcc-gfortran/8.3.0 --enable-languages=c,c++,fortran --disable-multilib |& tee configure.log
 -- make -j4 |& tee make.log
 -- make install |& tee makeinstall.log
 -- make check |& tee makecheck.log
@@ -15,7 +15,8 @@
 family("Compiler")
 
 local version = "8.3.0"
-local installdir = "/Users/mathomp4/installed/Core/gcc-gfortran"
+local homedir = os.getenv("HOME")
+local installdir = pathJoin(homedir,"installed/Core/gcc-gfortran")
 local pkgdir = pathJoin(installdir,version)
 local bindir = pathJoin(pkgdir,"bin")
 

@@ -1,6 +1,6 @@
 -- [[
 -- This was built using:
--- $ make -j4 install ESMF_COMM=mpich3 ESMF_COMPILER=pgi CC=pgcc CXX=pgc++ prefix=/Users/mathomp4/installed/MPI/pgi-18.4/mpich-3.2.1/Baselibs/5.1.3/Darwin
+-- $ make -j4 install ESMF_COMM=mpich3 ESMF_COMPILER=pgi CC=pgcc CXX=pgc++ prefix=$HOME/installed/MPI/pgi-18.4/mpich-3.2.1/Baselibs/5.1.3/Darwin
 --
 -- ]]
 

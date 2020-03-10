@@ -1,6 +1,6 @@
 -- [[
 -- This was built using:
--- $ make -j4 install ESMF_COMM=openmpi ESMF_COMPILER=gfortranclang FC=$FC prefix=/Users/mathomp4/installed/MPI/clang-gfortran-9.2.0/openmpi-4.0.1/Baselibs/6.0.2/Darwin |& tee makeinstall.clang-gfortran-9.2.0_openmpi-4.0.1.log
+-- $ make -j4 install ESMF_COMM=openmpi ESMF_COMPILER=gfortranclang FC=$FC prefix=$HOME/installed/MPI/clang-gfortran-9.2.0/openmpi-4.0.1/Baselibs/6.0.2/Darwin |& tee makeinstall.clang-gfortran-9.2.0_openmpi-4.0.1.log
 --
 -- ]]
 

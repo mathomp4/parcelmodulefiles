@@ -4,13 +4,15 @@
 
 family("Compiler")
 
+local homedir = os.getenv("HOME")
+
 local pgi_version = "17.4"
---local installdir = "/Users/mathomp4/installed/Core/pgi"
+--local installdir = pathJoin(homedir,"installed/Core/pgi")
 local pgi_installdir = "/opt/pgi/osx86-64"
 local pgi_pkgdir = pathJoin(pgi_installdir,pgi_version)
 
 local gcc_version = "6.3.0"
-local gcc_installdir = "/Users/mathomp4/installed/Core/gcc-gfortran"
+local gcc_installdir = pathJoin(homedir,"installed/Core/gcc-gfortran")
 local gcc_pkgdir = pathJoin(gcc_installdir,gcc_version)
 
 -- Setup Modulepath for packages built by this compiler

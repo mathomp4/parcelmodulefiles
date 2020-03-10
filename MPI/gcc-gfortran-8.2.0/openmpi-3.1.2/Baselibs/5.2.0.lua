@@ -1,7 +1,7 @@
 -- [[
 --
 -- This was built using:
--- $ make -j4 install ESMF_COMM=openmpi ESMF_COMPILER=gfortran prefix=/Users/mathomp4/installed/MPI/gcc-gfortran-8.2.0/openmpi-3.1.2/Baselibs/5.2.0/Darwin |& tee makeinstall.gcc-gfortran-8.2.0_openmpi-3.1.2.log
+-- $ make -j4 install ESMF_COMM=openmpi ESMF_COMPILER=gfortran prefix=$HOME/installed/MPI/gcc-gfortran-8.2.0/openmpi-3.1.2/Baselibs/5.2.0/Darwin |& tee makeinstall.gcc-gfortran-8.2.0_openmpi-3.1.2.log
 --
 -- ]]
 

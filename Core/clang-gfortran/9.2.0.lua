@@ -3,7 +3,8 @@
 family("Compiler")
 
 local version = "9.2.0"
-local fpkgdir = "/Users/mathomp4/installed/Core/gcc-gfortran/9.2.0-820loaded/bin"
+local homedir = os.getenv("HOME")
+local fpkgdir = pathJoin(homedir,"installed/Core/gcc-gfortran/9.2.0-820loaded/bin")
 local cpkgdir = "/usr/bin"
 
 -- Setup Modulepath for packages built by this compiler

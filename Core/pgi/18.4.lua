@@ -5,7 +5,8 @@
 -- family("Compiler")
 
 local version = "18.4"
---local installdir = "/Users/mathomp4/installed/Core/pgi"
+local homedir = os.getenv("HOME")
+--local installdir = pathJoin(homedir,"installed/Core/pgi")
 local installdir = "/opt/pgi/osx86-64"
 local pkgdir = pathJoin(installdir,version)
 
