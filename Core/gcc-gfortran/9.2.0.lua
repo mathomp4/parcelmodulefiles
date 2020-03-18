@@ -5,16 +5,11 @@
 --     edit ./contrib/download_prerequisites and change wget to curl -O
 -- Next, run contrib/download_prerequisites
 --
--- NOTE: Due to some bug with clang, I could not build 9.1.0 with clang. Instead I did:
---
--- ml gcc-gfortran/8.2.0
---
--- and then built with that loaded.
 -- NOTE: Decided to follow what homebrew does and add the --with-sysroot option in hope this can fix issues with f2py
 --
 -- Then, in a build directory:
 --
--- CC="$HOME/installed/Core/gcc-gfortran/8.2.0/bin/gcc --sysroot=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk" CXX="$HOME/installed/Core/gcc-gfortran/8.2.0/bin/g++ --sysroot=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk" ../gcc-9.2.0/configure --prefix=$HOME/installed/Core/gcc-gfortran/9.2.0-820loaded --enable-languages=c,c++,fortran --with-sysroot=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk |& tee configure.log
+-- ../gcc-9.2.0/configure --prefix=$HOME/installed/Core/gcc-gfortran/9.2.0-usingclang-Catalina --enable-languages=c,c++,fortran --with-sysroot=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk |& tee configure.log
 --
 -- make -j4 |& tee make.log
 -- make install |& tee makeinstall.log
@@ -23,7 +18,7 @@
 
 family("Compiler")
 
-local version = "9.2.0-820loaded"
+local version = "9.2.0-usingclang-Catalina"
 local homedir = os.getenv("HOME")
 local installdir = pathJoin(homedir,"installed/Core/gcc-gfortran")
 local pkgdir = pathJoin(installdir,version)
