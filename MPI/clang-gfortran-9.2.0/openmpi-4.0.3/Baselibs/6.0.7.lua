@@ -1,16 +1,16 @@
 -- [[
 -- This was built using:
--- $ make -j4 install ESMF_COMM=openmpi ESMF_COMPILER=gfortranclang FC=$FC prefix=$HOME/installed/MPI/clang-gfortran-9.2.0/openmpi-4.0.1/Baselibs/6.0.2/Darwin |& tee makeinstall.clang-gfortran-9.2.0_openmpi-4.0.1.log
+-- $ make -j4 install ESMF_COMM=openmpi ESMF_COMPILER=gfortranclang FC=mpifort CC=mpicc CXX=mpic++ MPICC=mpicc MPICXX=mpic++ MPIFC=mpifort prefix=$HOME/installed/MPI/clang-gfortran-9.2.0/openmpi-4.0.3/Baselibs/6.0.7/Darwin |& tee makeinstall.clang-gfortran-9.2.0_openmpi-4.0.3.log
 --
 -- ]]
 
 family("Baselibs")
--- prereq("GMAOpyD", "clang-gfortran/9.2.0", "openmpi/4.0.1")
+-- prereq("GMAOpyD", "clang-gfortran/9.2.0", "openmpi/4.0.3")
 
 local compilername = "clang-gfortran-9.2.0"
-local mpiname = "openmpi-4.0.1"
+local mpiname = "openmpi-4.0.3"
 
-local version = "6.0.2"
+local version = "6.0.7"
 local pathdir = pathJoin("MPI",compilername,mpiname)
 local homedir = os.getenv("HOME")
 local installdir = pathJoin(homedir,"installed")
