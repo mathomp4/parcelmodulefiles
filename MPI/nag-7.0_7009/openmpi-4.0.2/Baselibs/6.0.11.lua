@@ -1,7 +1,7 @@
 -- [[
 --
 -- This was built using:
--- $ make -j4 install ESMF_COMM=openmpi ESMF_COMPILER=nag prefix=$HOME/installed/MPI/nag-7.0_7009/openmpi-4.0.2/Baselibs/6.0.4/Darwin |& tee makeinstall.nag-7.0_7009_openmpi-4.0.2.log
+-- $ make -j4 install ESMF_COMM=openmpi ESMF_COMPILER=nag prefix=$HOME/installed/MPI/nag-7.0_7009/openmpi-4.0.2/Baselibs/6.0.11/Darwin |& tee makeinstall.nag-7.0_7009_openmpi-4.0.2.log
 --
 -- ]]
 
@@ -11,7 +11,7 @@ family("Baselibs")
 local compilername = "nag-7.0_7009"
 local mpiname = "openmpi-4.0.2"
 
-local version = "6.0.4"
+local version = "6.0.11"
 local pathdir = pathJoin("MPI",compilername,mpiname)
 local homedir = os.getenv("HOME")
 local installdir = pathJoin(homedir,"installed")
