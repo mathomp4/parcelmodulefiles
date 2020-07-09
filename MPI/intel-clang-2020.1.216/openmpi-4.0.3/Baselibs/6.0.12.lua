@@ -1,21 +1,17 @@
 -- [[
+-- This was built using:
 --
--- This was built using the CMake baselibs:
---
--- $ mkdir build-gfortran
--- $ cd build-gfortran
--- $ cmake .. -DCMAKE_INSTALL_PREFIX=$HOME/installed/MPI/gcc-gfortran-9.3.0/openmpi-4.0.3/Baselibs/6.0.11-cmake/Darwin |& tee cmake.log
--- $ make -j3 install |& tee makeinstall.log
+-- $ make -j4 install ESMF_COMM=openmpi ESMF_COMPILER=intelclang prefix=$HOME/installed/MPI/intel-clang-2020.1.216/openmpi-4.0.3/Baselibs/6.0.12/Darwin |& tee makeinstall.intel-clang-2020.1.216_openmpi-4.0.3.log
 --
 -- ]]
 
 family("Baselibs")
---prereq("gcc-gfortran/9.3.0", "openmpi/4.0.3")
+-- prereq("GMAOpyD", "intel-clang/2020.1.216", "openmpi/4.0.3")
 
-local compilername = "gcc-gfortran-9.3.0"
+local compilername = "intel-clang-2020.1.216"
 local mpiname = "openmpi-4.0.3"
 
-local version = "6.0.11-cmake"
+local version = "6.0.12"
 local pathdir = pathJoin("MPI",compilername,mpiname)
 local homedir = os.getenv("HOME")
 local installdir = pathJoin(homedir,"installed")
