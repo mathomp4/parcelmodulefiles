@@ -1,15 +1,15 @@
 -- [[
 -- This was built using:
 --
--- $ make -j4 install ESMF_COMM=openmpi ESMF_COMPILER=intelclang prefix=$HOME/installed/MPI/intel-clang-2020.1.216/openmpi-4.0.3/Baselibs/6.0.13/Darwin |& tee makeinstall.intel-clang-2020.1.216_openmpi-4.0.3.log
+-- $ make -j4 install ESMF_COMM=openmpi ESMF_COMPILER=intelclang prefix=$HOME/installed/MPI/intel-clang-2020.1.216/openmpi-4.0.4/Baselibs/6.0.13/Darwin |& tee makeinstall.intel-clang-2020.1.216_openmpi-4.0.4.log
 --
 -- ]]
 
 family("Baselibs")
--- prereq("GMAOpyD", "intel-clang/2020.1.216", "openmpi/4.0.3")
+-- prereq("GMAOpyD", "intel-clang/2020.1.216", "openmpi/4.0.4")
 
 local compilername = "intel-clang-2020.1.216"
-local mpiname = "openmpi-4.0.3"
+local mpiname = "openmpi-4.0.4"
 
 local version = "6.0.13"
 local pathdir = pathJoin("MPI",compilername,mpiname)
