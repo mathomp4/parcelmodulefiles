@@ -1,17 +1,17 @@
 -- [[
 --
 -- This was built using:
--- $ make -j3 install ESMF_COMM=openmpi ESMF_COMPILER=gfortran prefix=$HOME/installed/MPI/gcc-gfortran-10.1.0/openmpi-4.0.4/Baselibs/6.0.14-Test/Darwin |& tee makeinstall.gcc-gfortran-10.1.0_openmpi-4.0.4.log
+-- $ make -j4 install ESMF_COMM=openmpi ESMF_COMPILER=nag prefix=$HOME/installed/MPI/nag-7.0_7020/openmpi-4.0.4/Baselibs/6.0.16/Darwin |& tee makeinstall.nag-7.0_7020_openmpi-4.0.4.log
 --
 -- ]]
 
 family("Baselibs")
---prereq("gcc-gfortran/10.1.0", "openmpi/4.0.4")
+--prereq("nag/7.0_7020", "openmpi/4.0.4")
 
-local compilername = "gcc-gfortran-10.1.0"
+local compilername = "nag-7.0_7020"
 local mpiname = "openmpi-4.0.4"
 
-local version = "6.0.14-Test"
+local version = "6.0.16"
 local pathdir = pathJoin("MPI",compilername,mpiname)
 local homedir = os.getenv("HOME")
 local installdir = pathJoin(homedir,"installed")
