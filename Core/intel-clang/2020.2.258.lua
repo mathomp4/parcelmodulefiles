@@ -1,4 +1,7 @@
 -- stub routine for Intel 2020.2.258 with clang --
+--
+-- REMEMBER TO HAVE GMAO SUPPORT REMOVE INTEL SYMLINKS
+-- IN /usr/local/bin OTHERWISE BASELIBS IS NOT HAPPY
 
 family("Compiler")
 
