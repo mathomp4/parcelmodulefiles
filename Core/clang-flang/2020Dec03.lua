@@ -2,25 +2,26 @@
 --
 -- Built as instructed on:
 --
--- https://llvm.org/docs/GettingStarted.html
+-- https://llvm.org/docs/GettingStarted.html SUPERSEDED BY
+-- https://clang.llvm.org/get_started.html
 --
 -- git clone https://github.com/llvm/llvm-project.git
 -- cd llvm-project
 -- mkdir build
 -- cd build
--- cmake -G Ninja ../llvm -DLLVM_ENABLE_PROJECTS="clang;flang" -DCMAKE_INSTALL_PREFIX=/Users/mathomp4/installed/Core/clang-flang/2020-06-24 -DLLVM_TARGETS_TO_BUILD="X86"
--- ninja install
+-- cmake ../llvm -DLLVM_ENABLE_PROJECTS="clang;flang" -DCMAKE_INSTALL_PREFIX=/Users/mathomp4/installed/Core/clang-flang/2020Dec03 -DLLVM_TARGETS_TO_BUILD="X86" -DCMAKE_BUILD_TYPE=Release
+-- make -j6 install |& tee makeinstall.log
 
 family("Compiler")
 
-local version = "2020-06-24"
+local version = "2020Dec03"
 local homedir = os.getenv("HOME")
 local pkgdir = pathJoin(homedir,"installed/Core/clang-flang",version)
 local bindir = pathJoin(pkgdir,"bin")
 
 -- Setup Modulepath for packages built by this compiler
 local mroot = os.getenv("MODULEPATH_ROOT")
-local mdir  = pathJoin(mroot,"Compiler/clang-flang-2020-06-24")
+local mdir  = pathJoin(mroot,"Compiler/clang-flang-2020Dec03")
 prepend_path("MODULEPATH", mdir)
 
 setenv("CC",pathJoin(bindir,"clang"))
