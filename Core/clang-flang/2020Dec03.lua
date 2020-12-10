@@ -9,7 +9,7 @@
 -- cd llvm-project
 -- mkdir build
 -- cd build
--- cmake ../llvm -DLLVM_ENABLE_PROJECTS="clang;flang" -DCMAKE_INSTALL_PREFIX=/Users/mathomp4/installed/Core/clang-flang/2020Dec03 -DLLVM_TARGETS_TO_BUILD="X86" -DCMAKE_BUILD_TYPE=Release
+-- cmake ../llvm -DLLVM_ENABLE_PROJECTS="clang;flang" -DCMAKE_INSTALL_PREFIX=$HOME/installed/Core/clang-flang/2020Dec03 -DLLVM_TARGETS_TO_BUILD="X86" -DCMAKE_BUILD_TYPE=Release
 -- make -j6 install |& tee makeinstall.log
 
 family("Compiler")

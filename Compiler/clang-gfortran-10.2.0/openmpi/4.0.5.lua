@@ -1,7 +1,7 @@
 -- [[
 --
 -- This was built using:
--- $ ./configure --disable-wrapper-rpath --disable-wrapper-runpath CC=clang CXX=clang++ FC=/Users/mathomp4/installed/Core/gcc-gfortran/10.2.0/bin/gfortran --prefix=$HOME/installed/Compiler/clang-gfortran-10.2.0/openmpi/4.0.5 |& tee configure.clang-gfortran-10.2.0.log
+-- $ ./configure --disable-wrapper-rpath --disable-wrapper-runpath CC=clang CXX=clang++ FC=$HOME/installed/Core/gcc-gfortran/10.2.0/bin/gfortran --prefix=$HOME/installed/Compiler/clang-gfortran-10.2.0/openmpi/4.0.5 |& tee configure.clang-gfortran-10.2.0.log
 -- $ mv config.log config.clang-gfortran-10.2.0.log
 -- $ make -j4 |& tee make.clang-gfortran-10.2.0.log
 -- $ make install |& tee makeinstall.clang-gfortran-10.2.0.log

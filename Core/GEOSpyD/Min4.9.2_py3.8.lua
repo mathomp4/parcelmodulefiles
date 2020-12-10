@@ -6,7 +6,7 @@
 --
 -- to install:
 --
---   ./install_miniconda.bash --python_version 3.8 --miniconda_version 4.9.2 --prefix /Users/mathomp4/GEOSpyD |& tee install_mini3.log
+--   ./install_miniconda.bash --python_version 3.8 --miniconda_version 4.9.2 --prefix $HOME/GEOSpyD |& tee install_mini3.log
 --
 
 family("Python")
