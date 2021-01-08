@@ -1,7 +1,7 @@
 -- quick load --
 
-load("GEOSpyD/Min4.8.3_py2.7")
-load("MKL/2020.4.301")
+load("GEOSpyD")
+load("MKL")
 load("intel-clang")
 load("openmpi")
 load("Baselibs")
