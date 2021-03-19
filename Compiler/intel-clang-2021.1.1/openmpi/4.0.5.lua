@@ -45,3 +45,4 @@ prepend_path("INCLUDE",pathJoin(pkgdir,"include"))
 prepend_path("MANPATH",pathJoin(pkgdir,"share/man"))
 
 setenv("OMPI_MCA_btl_tcp_if_include","lo0")
+setenv("OMPI_MCA_btl","^tcp")
