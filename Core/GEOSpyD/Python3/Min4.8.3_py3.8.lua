@@ -5,7 +5,7 @@
 --   git@github.com:mathomp4/anaconda.git
 --
 
-family("Python")
+family("Python3")
 
 local homedir = os.getenv("HOME")
 local installdir = pathJoin(homedir,"GEOSpyD")
@@ -20,7 +20,7 @@ local pkgdir = pathJoin(installdir,pathdir)
 
 -- Setup Modulepath for packages built by this compiler
 local mroot = os.getenv("MODULEPATH_ROOT")
-local mdir  = pathJoin(mroot,"Python/GEOSpyD",geospyd_version)
+local mdir  = pathJoin(mroot,"Python3/GEOSpyD",geospyd_version)
 prepend_path("MODULEPATH", mdir)
 
 unsetenv("ESMA_F2PY")

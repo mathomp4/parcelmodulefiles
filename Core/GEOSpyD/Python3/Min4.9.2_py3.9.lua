@@ -5,22 +5,22 @@
 --   git@github.com:mathomp4/anaconda.git
 --
 
-family("Python")
+family("Python3")
 
 local homedir = os.getenv("HOME")
 local installdir = pathJoin(homedir,"GEOSpyD")
 
-local miniconda_version = "4.8.3"
-local python_version = "2.7"
+local miniconda_version = "4.9.2"
+local python_version = "3.9"
 local geospyd_version = miniconda_version .. "_py" .. python_version
-local builddate = "2020-08-17"
+local builddate = "2021-03-31"
 
 local pathdir = pathJoin(geospyd_version,builddate)
 local pkgdir = pathJoin(installdir,pathdir)
 
 -- Setup Modulepath for packages built by this compiler
 local mroot = os.getenv("MODULEPATH_ROOT")
-local mdir  = pathJoin(mroot,"Python/GEOSpyD",geospyd_version)
+local mdir  = pathJoin(mroot,"Python3/GEOSpyD",geospyd_version)
 prepend_path("MODULEPATH", mdir)
 
 unsetenv("ESMA_F2PY")

@@ -1,20 +1,24 @@
 -- [[
 --
 -- This was built using:
--- $ ./configure --disable-wrapper-rpath --disable-wrapper-runpath CC=gcc CXX=g++ FC=gfortran --prefix=$HOME/installed/Compiler/gcc-gfortran-10.2.0/openmpi/4.0.4 |& tee configure.gcc-gfortran-10.2.0.log
--- $ mv config.log config.gcc-gfortran-10.2.0.log
--- $ make -j4 |& tee make.gcc-gfortran-10.2.0.log
--- $ make install |& tee makeinstall.gcc-gfortran-10.2.0.log
--- $ make check |& tee makecheck.gcc-gfortran-10.2.0.log
+-- $ lt_cv_ld_force_load=no ./configure --disable-wrapper-rpath --disable-wrapper-runpath CC=clang CXX=clang++ FC=ifort --prefix=$HOME/installed/Compiler/intel-clang-2021.2.0/openmpi/4.1.0 |& tee configure.intel-clang-2021.2.0.log
+-- $ mv config.log config.intel-clang-2021.2.0.log
+-- $ make -j6 |& tee make.intel-clang-2021.2.0.log
+-- $ make install |& tee makeinstall.intel-clang-2021.2.0.log
+-- $ make check |& tee makecheck.intel-clang-2021.2.0.log
 --
+-- That weird lt_cv_ld_force_load bit is from https://github.com/open-mpi/ompi/issues/7615 
+-- Seems to be an Intel issue.
+-- 
 -- ]]
 
 family("MPI")
-prereq("gcc-gfortran/10.2.0")
+local intel_version = "2021.2.0"
+prereq("intel-clang/"..intel_version)
 
-local compilername = "gcc-gfortran-10.2.0"
+local compilername = "intel-clang-"..intel_version
 
-local version = "4.0.4"
+local version = "4.1.0"
 local compiler = pathJoin("Compiler",compilername)
 local homedir = os.getenv("HOME")
 local installdir = pathJoin(homedir,"installed")
@@ -22,7 +26,7 @@ local pkgdir = pathJoin(installdir,compiler,"openmpi",version)
 
 -- Setup Modulepath for packages built by this MPI stack
 local mroot = os.getenv("MODULEPATH_ROOT")
-local mdir = pathJoin(mroot,"MPI/gcc-gfortran-10.2.0",("openmpi-"..version))
+local mdir = pathJoin(mroot,"MPI",compilername,("openmpi-"..version))
 prepend_path("MODULEPATH", mdir)
 
 setenv("OPENMPI",pkgdir)
@@ -41,3 +45,5 @@ prepend_path("INCLUDE",pathJoin(pkgdir,"include"))
 prepend_path("MANPATH",pathJoin(pkgdir,"share/man"))
 
 -- setenv("OMPI_MCA_btl_tcp_if_include","lo0")
+-- setenv("OMPI_MCA_io","romio321")
+setenv("OMPI_MCA_btl","^tcp")

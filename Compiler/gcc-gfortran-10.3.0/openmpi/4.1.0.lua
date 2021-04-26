@@ -1,20 +1,22 @@
 -- [[
 --
+-- NOTE NOTE NOTE Added new OMPI_MCA flag from https://github.com/open-mpi/ompi/issues/8350
+--
 -- This was built using:
--- $ ./configure --disable-wrapper-rpath --disable-wrapper-runpath CC=gcc CXX=g++ FC=gfortran --prefix=$HOME/installed/Compiler/gcc-gfortran-10.2.0/openmpi/4.0.4 |& tee configure.gcc-gfortran-10.2.0.log
--- $ mv config.log config.gcc-gfortran-10.2.0.log
--- $ make -j4 |& tee make.gcc-gfortran-10.2.0.log
--- $ make install |& tee makeinstall.gcc-gfortran-10.2.0.log
--- $ make check |& tee makecheck.gcc-gfortran-10.2.0.log
+-- $ ./configure --disable-wrapper-rpath --disable-wrapper-runpath CC=gcc CXX=g++ FC=gfortran --prefix=$HOME/installed/Compiler/gcc-gfortran-10.3.0/openmpi/4.1.0 |& tee configure.gcc-gfortran-10.3.0.log
+-- $ mv config.log config.gcc-gfortran-10.3.0.log
+-- $ make -j4 |& tee make.gcc-gfortran-10.3.0.log
+-- $ make install |& tee makeinstall.gcc-gfortran-10.3.0.log
+-- $ make check |& tee makecheck.gcc-gfortran-10.3.0.log
 --
 -- ]]
 
 family("MPI")
-prereq("gcc-gfortran/10.2.0")
+prereq("gcc-gfortran/10.3.0")
 
-local compilername = "gcc-gfortran-10.2.0"
+local compilername = "gcc-gfortran-10.3.0"
 
-local version = "4.0.4"
+local version = "4.1.0"
 local compiler = pathJoin("Compiler",compilername)
 local homedir = os.getenv("HOME")
 local installdir = pathJoin(homedir,"installed")
@@ -22,7 +24,7 @@ local pkgdir = pathJoin(installdir,compiler,"openmpi",version)
 
 -- Setup Modulepath for packages built by this MPI stack
 local mroot = os.getenv("MODULEPATH_ROOT")
-local mdir = pathJoin(mroot,"MPI/gcc-gfortran-10.2.0",("openmpi-"..version))
+local mdir = pathJoin(mroot,"MPI/gcc-gfortran-10.3.0",("openmpi-"..version))
 prepend_path("MODULEPATH", mdir)
 
 setenv("OPENMPI",pkgdir)
@@ -41,3 +43,5 @@ prepend_path("INCLUDE",pathJoin(pkgdir,"include"))
 prepend_path("MANPATH",pathJoin(pkgdir,"share/man"))
 
 -- setenv("OMPI_MCA_btl_tcp_if_include","lo0")
+setenv("OMPI_MCA_io","romio321")
+setenv("OMPI_MCA_btl","^tcp")

@@ -1,6 +1,6 @@
 -- quick load --
 
-load("GEOSpyD")
+load("GEOSpyD/Python3")
 load("MKL")
 load("clang-gfortran")
 load("openmpi")
