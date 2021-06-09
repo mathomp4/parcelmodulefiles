@@ -1,7 +1,7 @@
 -- [[
 --
 -- This was built using:
--- $ make -j4 install ESMF_COMM=openmpi ESMF_COMPILER=nag prefix=$HOME/installed/MPI/nag-7.0_7045/openmpi-4.1.1/Baselibs/6.2.4/Darwin |& tee makeinstall.nag-7.0_7045_openmpi-4.1.1.log
+-- $ make -j4 install ESMF_COMM=openmpi ESMF_COMPILER=nag prefix=$HOME/installed/MPI/nag-7.0_7045/openmpi-4.1.1/Baselibs/6.2.5/Darwin |& tee makeinstall.nag-7.0_7045_openmpi-4.1.1.log
 --
 -- NOTE: To build curl on Parcel, I had to do:
 --
@@ -22,7 +22,7 @@ family("Baselibs")
 local compilername = "nag-7.0_7045"
 local mpiname = "openmpi-4.1.1"
 
-local version = "6.2.4"
+local version = "6.2.5"
 local pathdir = pathJoin("MPI",compilername,mpiname)
 local homedir = os.getenv("HOME")
 local installdir = pathJoin(homedir,"installed")
