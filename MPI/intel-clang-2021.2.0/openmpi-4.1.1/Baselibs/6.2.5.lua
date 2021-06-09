@@ -1,7 +1,7 @@
 -- [[
 -- This was built using:
 --
--- $ make -j6 install ESMF_COMM=openmpi ESMF_COMPILER=intelclang prefix=$HOME/installed/MPI/intel-clang-2021.2.0/openmpi-4.1.1/Baselibs/6.2.4/Darwin |& tee makeinstall.intel-clang-2021.2.0_openmpi-4.1.1.log
+-- $ make -j6 install ESMF_COMM=openmpi ESMF_COMPILER=intelclang prefix=$HOME/installed/MPI/intel-clang-2021.2.0/openmpi-4.1.1/Baselibs/6.2.5/Darwin |& tee makeinstall.intel-clang-2021.2.0_openmpi-4.1.1.log
 --
 -- NOTE: To build curl on Parcel, I had to do:
 -- 
@@ -24,7 +24,7 @@ family("Baselibs")
 local compilername = "intel-clang-2021.2.0"
 local mpiname = "openmpi-4.1.1"
 
-local version = "6.2.4"
+local version = "6.2.5"
 local pathdir = pathJoin("MPI",compilername,mpiname)
 local homedir = os.getenv("HOME")
 local installdir = pathJoin(homedir,"installed")
