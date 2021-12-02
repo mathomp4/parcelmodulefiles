@@ -4,23 +4,29 @@
 --
 --   git@github.com:mathomp4/anaconda.git
 --
+-- and I ran
+--
+--   ./install_miniconda.bash --python_version 2.7 --miniconda_version 4.8.3 --prefix /Users/mathomp4/GEOSpyD --conda
+--
+-- NOTE: You'll need to set the date below!
+--
 
-family("Python3")
+family("Python2")
 
 local homedir = os.getenv("HOME")
 local installdir = pathJoin(homedir,"GEOSpyD")
 
 local miniconda_version = "4.8.3"
-local python_version = "3.8"
+local python_version = "2.7"
 local geospyd_version = miniconda_version .. "_py" .. python_version
-local builddate = "2020-08-17"
+local builddate = "2021-12-02"
 
 local pathdir = pathJoin(geospyd_version,builddate)
 local pkgdir = pathJoin(installdir,pathdir)
 
 -- Setup Modulepath for packages built by this compiler
 local mroot = os.getenv("MODULEPATH_ROOT")
-local mdir  = pathJoin(mroot,"Python3/GEOSpyD",geospyd_version)
+local mdir  = pathJoin(mroot,"Python2/GEOSpyD",geospyd_version)
 prepend_path("MODULEPATH", mdir)
 
 unsetenv("ESMA_F2PY")

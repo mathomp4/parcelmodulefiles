@@ -4,6 +4,12 @@
 --
 --   git@github.com:mathomp4/anaconda.git
 --
+-- and I ran
+-- 
+--   ./install_miniconda.bash --python_version 3.9 --miniconda_version 4.9.2 --prefix /Users/mathomp4/GEOSpyD
+--
+-- NOTE: You'll need to set the date below!
+--
 
 family("Python3")
 
@@ -13,7 +19,7 @@ local installdir = pathJoin(homedir,"GEOSpyD")
 local miniconda_version = "4.9.2"
 local python_version = "3.9"
 local geospyd_version = miniconda_version .. "_py" .. python_version
-local builddate = "2021-05-05"
+local builddate = "2021-12-02"
 
 local pathdir = pathJoin(geospyd_version,builddate)
 local pkgdir = pathJoin(installdir,pathdir)
