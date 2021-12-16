@@ -4,6 +4,14 @@
 --
 -- REMEMBER TO HAVE GMAO SUPPORT REMOVE INTEL SYMLINKS
 -- IN /usr/local/bin OTHERWISE BASELIBS IS NOT HAPPY
+--
+-- ALSO: Remember to generate the missing for_mac_ftn_alloc.dylib library:
+--
+--   https://github.com/mathomp4/IntelMacMissingLibraryGenerator
+--
+-- and have GMAO Support copy that file into:
+--
+--   /opt/intel/oneapi/compiler/2021.4.0/mac/compiler/lib
 
 family("Compiler")
 

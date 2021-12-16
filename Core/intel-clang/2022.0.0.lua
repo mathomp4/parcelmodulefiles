@@ -1,4 +1,4 @@
--- stub routine for Intel 2021.4.0 with clang --
+-- stub routine for Intel 2022.0.0 with clang --
 --
 -- I installed TBB, IPP, and MKL from the Base image
 --
@@ -11,11 +11,11 @@
 --
 -- and have GMAO Support copy that file into:
 --
---   /opt/intel/oneapi/compiler/2021.4.0/mac/compiler/lib
+--   /opt/intel/oneapi/compiler/2022.0.0/mac/compiler/lib
 
 family("Compiler")
 
-local version = "2021.4.0"
+local version = "2022.0.0"
 local homedir = "/opt/intel/oneapi"
 local fpkgdir = pathJoin(homedir,"compiler",version,"mac")
 local fbindir = pathJoin(fpkgdir,"bin/intel64")
@@ -40,13 +40,13 @@ prepend_path("DYLD_LIBRARY_PATH",pathJoin(fpkgdir,"compiler/lib"))
 prepend_path("INCLUDE_PATH",pathJoin(fpkgdir,"compiler/include"))
 prepend_path("MANPATH",fdocdir)
 
--- MAT: Note it looks like 2021.4 does not need this anymore
+-- MAT: Note it looks like 2022.0 does need this again
 --
--- local sdk_version = subprocess("xcodebuild -sdk macosx -version | grep SDKVersion")
--- setenv("INTEL_OSXSDK_VER",sdk_version)
+local sdk_version = subprocess("xcodebuild -sdk macosx -version | grep SDKVersion")
+setenv("INTEL_OSXSDK_VER",sdk_version)
 -- 
--- local sdk_path = subprocess("xcodebuild -sdk macosx -version Path")
--- setenv("INTEL_OSXSDK_PATH",sdk_path)
+local sdk_path = subprocess("xcodebuild -sdk macosx -version Path")
+setenv("INTEL_OSXSDK_PATH",sdk_path)
 -- 
--- prepend_path("PATH",pathJoin(os.getenv("HOME"),"intelhack"))
+prepend_path("PATH",pathJoin(os.getenv("HOME"),"intelhack"))
 
