@@ -4,9 +4,6 @@
 family("Math")
 
 local version = "2021.3.0"
--- local pathdir = pathJoin("Core","Anaconda2",version)
--- local homedir = os.getenv("HOME")
--- local installdir = pathJoin(homedir,"installed")
 local pkgdir = pathJoin("/opt/intel/oneapi/mkl",version)
 
 -- Setup Modulepath for packages built by this compiler

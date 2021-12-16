@@ -4,9 +4,6 @@
 family("Math")
 
 local version = "2020.4.301"
--- local pathdir = pathJoin("Core","Anaconda2",version)
--- local homedir = os.getenv("HOME")
--- local installdir = pathJoin(homedir,"installed")
 local pkgdir = pathJoin("/opt/intel/compilers_and_libraries_2020.4.301/mac/mkl")
 
 -- Setup Modulepath for packages built by this compiler

@@ -3,12 +3,12 @@
 
 family("Math")
 
-local version = "2021.1.1"
+local version = "2022.0.0"
 local pkgdir = pathJoin("/opt/intel/oneapi/mkl",version)
 
 -- Setup Modulepath for packages built by this compiler
 local mroot = os.getenv("MODULEPATH_ROOT")
-local mdir  = pathJoin(mroot,"Math/MKL-2021.1.1")
+local mdir  = pathJoin(mroot,"Math/MKL-2022.0.0")
 prepend_path("MODULEPATH", mdir)
 
 setenv('MKLROOT',pkgdir)
