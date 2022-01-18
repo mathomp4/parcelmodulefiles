@@ -4,7 +4,7 @@
 -- To install NAG, you mount the DMG and then cd to it in /Volumes
 -- Then run INSTALL.sh and put in *absolute* paths:
 --
---  /Users/mathomp4/installed/Core/nag/7.0_7062/bin
+--  $HOME/installed/Core/nag/7.0_7062/bin
 --
 -- NOTE 1
 --
@@ -61,5 +61,5 @@ prepend_path("LIBRARY_PATH",nag_libdir)
 --prepend_path("INCLUDE",nag_incdir)
 prepend_path("MANPATH",nag_mandir)
 
-setenv("NAG_KUSARI_FILE","/Users/mathomp4/nag.key")
+setenv("NAG_KUSARI_FILE",pathJoin(homedir,"nag.key"))
 
