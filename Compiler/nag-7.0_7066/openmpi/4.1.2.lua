@@ -1,12 +1,23 @@
 -- [[
 --
--- For reasons I don't know, I all of the sudden needed to build this as a static library. If shared, it complained that '-dynamiclib' (a clang flag) was being passed to nagfor which can't handle it.
+-- NOTE NOTE NOTE
+--
+-- You *MUST* run:
+--
+--   $ unset MACOSX_DEPLOYMENT_TARGET
+--
+-- to avoid the -dynamiclib not allowed error
+--
+-- This is because MACOSX_DEPLOYMENT_TARGET triggers a bad codepath
+-- inside the configure script
+--
+-- -----------
 --
 -- This was built using:
 --
 -- $ mkdir build-nag-7.0_7066
 -- $ cd build-nag-7.0_7066
--- $ ../configure --disable-wrapper-rpath --disable-wrapper-runpath --enable-static -disable-shared FCFLAGS"=-mismatch_all -fpp" CC=gcc CXX=g++ FC=nagfor --prefix=$HOME/installed/Compiler/nag-7.0_7066/openmpi/4.1.2 |& tee configure.nag-7.0_7066.log
+-- $ ../configure --disable-wrapper-rpath --disable-wrapper-runpath FCFLAGS"=-mismatch_all -fpp" --prefix=$HOME/installed/Compiler/nag-7.0_7066/openmpi/4.1.2 |& tee configure.nag-7.0_7066.log
 --
 -- $ mv config.log config.nag-7.0_7066.log
 -- $ make -j4 |& tee make.nag-7.0_7066.log
