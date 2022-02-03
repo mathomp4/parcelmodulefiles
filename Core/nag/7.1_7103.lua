@@ -1,10 +1,10 @@
 --
--- stub routine for nag 7.1_7101 --
+-- stub routine for nag 7.1_7103 --
 --
 -- To install NAG, you mount the DMG and then cd to it in /Volumes
 -- Then run INSTALL.sh and put in *absolute* paths:
 --
---  $HOME/installed/Core/nag/7.1_7101/bin
+--  $HOME/installed/Core/nag/7.1_7103/bin
 --
 -- NOTE 1
 --
@@ -14,7 +14,7 @@
 ----
 ---- You must run:
 ----
----- install_name_tool -id $HOME/installed/Core/nag/7.1_7101/lib/NAG_Fortran/libf71rts.dylib $HOME/installed/Core/nag/7.1_7101/lib/NAG_Fortran/libf71rts.dylib
+---- install_name_tool -id $HOME/installed/Core/nag/7.1_7103/lib/NAG_Fortran/libf71rts.dylib $HOME/installed/Core/nag/7.1_7103/lib/NAG_Fortran/libf71rts.dylib
 ----
 ---- I cannot figure out yet how to make this more generic. I'd think
 ---- @executable_path should work, but I guess not? Maybe something with
@@ -22,17 +22,26 @@
 --
 -- NOTE 2
 --
----- Before, I had to run on the command line:
+---- Before, I had go into Finder and run:
 ---- 
-----  $HOME/installed/Core/nag/7.1_7101/lib/NAG_Fortran/nagfor
+----  $HOME/installed/Core/nag/7.1_7103/lib/NAG_Fortran/nagfor
 ----
 ---- for permissions issues before I could build anything with it. 
----- But now it looks like you need admin rights
+---- But now it looks like you need admin rights. But once you do that
+---- and cancel then ...
+--
+-- NOTE 3
+--
+---- you seem to be able to just run in Terminal:
+---- 
+----   $HOME/installed/Core/nag/7.0_7066/bin/nagfor
+----
+---- And it worked!
 --
 
 family("Compiler")
 
-local nag_version = "7.1_7101"
+local nag_version = "7.1_7103"
 local nag_version_with_name = "nag-" .. nag_version
 
 local homedir = os.getenv("HOME")
@@ -48,8 +57,8 @@ local mroot = os.getenv("MODULEPATH_ROOT")
 local mdir  = pathJoin(mroot,"Compiler",nag_version_with_name)
 prepend_path("MODULEPATH", mdir)
 
-setenv("CC","gcc")
-setenv("CXX","g++")
+setenv("CC","clang")
+setenv("CXX","clang++")
 setenv("FC",pathJoin(nag_bindir,"nagfor"))
 setenv("F90",pathJoin(nag_bindir,"nagfor"))
 setenv("ESMA_FC","nagfor")

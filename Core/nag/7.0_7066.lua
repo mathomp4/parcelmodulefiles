@@ -27,11 +27,12 @@
 ----  $HOME/installed/Core/nag/7.0_7066/lib/NAG_Fortran/nagfor
 ----
 ---- for permissions issues before I could build anything with it. 
----- But now it looks like you need admin rights
+---- But now it looks like you need admin rights. But once you do that
+---- and cancel then ...
 --
 -- NOTE 3
 --
----- Or not. I just ran:
+---- you seem to be able to just run in Terminal:
 ---- 
 ----   $HOME/installed/Core/nag/7.0_7066/bin/nagfor
 ----
