@@ -11,13 +11,15 @@
 -- This is because MACOSX_DEPLOYMENT_TARGET triggers a bad codepath
 -- inside the configure script
 --
+-- No longer need mismatch all for 7.1
+--
 -- -----------
 --
 -- This was built using:
 --
 -- $ mkdir build-nag-7.1_7103
 -- $ cd build-nag-7.1_7103
--- $ ../configure --disable-wrapper-rpath --disable-wrapper-runpath FCFLAGS"=-mismatch_all -fpp" --prefix=$HOME/installed/Compiler/nag-7.1_7103/openmpi/4.1.2 |& tee configure.nag-7.1_7103.log
+-- $ ../configure --disable-wrapper-rpath --disable-wrapper-runpath --prefix=$HOME/installed/Compiler/nag-7.1_7103/openmpi/4.1.2 |& tee configure.nag-7.1_7103.log
 --
 -- $ mv config.log config.nag-7.1_7103.log
 -- $ make -j4 |& tee make.nag-7.1_7103.log
