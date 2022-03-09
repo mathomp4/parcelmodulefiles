@@ -3,7 +3,9 @@
 -- NOTE NOTE NOTE Added new OMPI_MCA flag from https://github.com/open-mpi/ompi/issues/8350
 --
 -- This was built using:
--- $ ./configure --disable-wrapper-rpath --disable-wrapper-runpath CC=gcc CXX=g++ FC=gfortran --prefix=$HOME/installed/Compiler/gcc-gfortran-11.2.0/openmpi/4.1.2 |& tee configure.gcc-gfortran-11.2.0.log
+-- $ mkdir build-gcc-gfortran-11.2.0
+-- $ cd build-gcc-gfortran-11.2.0
+-- $ ../configure --disable-wrapper-rpath --disable-wrapper-runpath CC=gcc CXX=g++ FC=gfortran --prefix=$HOME/installed/Compiler/gcc-gfortran-11.2.0/openmpi/4.1.2 |& tee configure.gcc-gfortran-11.2.0.log
 -- $ mv config.log config.gcc-gfortran-11.2.0.log
 -- $ make -j4 |& tee make.gcc-gfortran-11.2.0.log
 -- $ make install |& tee makeinstall.gcc-gfortran-11.2.0.log
