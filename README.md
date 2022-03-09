@@ -5,7 +5,7 @@
 If you install `lmod` with brew, then this is how I am getting the modulefiles into my environment:
 
 ```
-. $(brew --prefix)/opt/lmod/init/profile
+. $(brew --prefix)/opt/lmod/init/zsh
 export MODULEPATH_ROOT=$HOME/modulefiles
 module use $MODULEPATH_ROOT/Core
 ```
