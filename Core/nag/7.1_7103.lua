@@ -34,7 +34,7 @@
 --
 ---- you seem to be able to just run in Terminal:
 ---- 
-----   $HOME/installed/Core/nag/7.0_7066/bin/nagfor
+----   $HOME/installed/Core/nag/7.1_7103/bin/nagfor
 ----
 ---- And it worked!
 --
