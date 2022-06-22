@@ -1,7 +1,7 @@
 -- [[
 --
 -- This was built using:
--- $ make -j4 install ESMF_COMM=openmpi ESMF_COMPILER=gfortran prefix=$HOME/installed/MPI/gcc-gfortran-11.3.0/openmpi-4.1.3/Baselibs/6.2.13/Darwin |& tee makeinstall.gcc-gfortran-11.3.0_openmpi-4.1.3.log
+-- $ make -j4 install ESMF_COMM=openmpi ESMF_COMPILER=nag prefix=$HOME/installed/MPI/nag-7.1_7110/openmpi-4.1.3/Baselibs/7.1.0/Darwin |& tee makeinstall.nag-7.1_7110_openmpi-4.1.3.log
 --
 -- NOTE: To build curl on Parcel, I had to do:
 --
@@ -17,16 +17,17 @@
 -- ]]
 
 family("Baselibs")
---prereq("gcc-gfortran/11.3.0", "openmpi/4.1.3")
+--prereq("nag/7.1_7110", "openmpi/4.1.3")
 
-local compilername = "gcc-gfortran-11.3.0"
+local compilername = "nag-7.1_7110"
 local mpiname = "openmpi-4.1.3"
 
-local version = myModuleVersion()
+local version = "7.1.0"
 local pathdir = pathJoin("MPI",compilername,mpiname)
 local homedir = os.getenv("HOME")
 local installdir = pathJoin(homedir,"installed")
-local pkgdir = pathJoin(installdir,pathdir,"Baselibs",version)
+--local pkgdir = pathJoin(installdir,pathdir,"Baselibs",version)
+local pkgdir = "/Users/mathomp4/Baselibs/ESMA-Baselibs-6.2.14-withMyESMFCMakeFork/x86_64-apple-darwin20.6.0/nagfor"
 
 -- Setup Modulepath for packages built by this MPI stack
 local mroot = os.getenv("MODULEPATH_ROOT")

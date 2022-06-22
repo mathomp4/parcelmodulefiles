@@ -1,10 +1,10 @@
 -- [[
---
 -- This was built using:
--- $ make -j4 install ESMF_COMM=openmpi ESMF_COMPILER=gfortran prefix=$HOME/installed/MPI/gcc-gfortran-11.3.0/openmpi-4.1.3/Baselibs/6.2.13/Darwin |& tee makeinstall.gcc-gfortran-11.3.0_openmpi-4.1.3.log
+--
+-- $ make -j4 install ESMF_COMM=openmpi ESMF_COMPILER=intelclang prefix=$HOME/installed/MPI/intel-clang-2022.1.0/openmpi-4.1.3/Baselibs/7.3.1/Darwin |& tee makeinstall.intel-clang-2022.1.0_openmpi-4.1.3.log
 --
 -- NOTE: To build curl on Parcel, I had to do:
---
+-- 
 --   brew install automake autoconf libtool
 --
 -- then I had to make symlinks so that it could find these:
@@ -14,15 +14,17 @@
 --   ln -s $(brew --prefix)/bin/glibtool $HOME/bin/libtool
 --
 -- NOTE THE LAST ONE! Brew installs glibtool, so as not to collide with clang libtool
+--
+--
 -- ]]
 
 family("Baselibs")
---prereq("gcc-gfortran/11.3.0", "openmpi/4.1.3")
+-- prereq("GMAOpyD", "intel-clang/2022.1.0", "openmpi/4.1.3")
 
-local compilername = "gcc-gfortran-11.3.0"
+local compilername = "intel-clang-2022.1.0"
 local mpiname = "openmpi-4.1.3"
 
-local version = myModuleVersion()
+local version = "7.3.1"
 local pathdir = pathJoin("MPI",compilername,mpiname)
 local homedir = os.getenv("HOME")
 local installdir = pathJoin(homedir,"installed")

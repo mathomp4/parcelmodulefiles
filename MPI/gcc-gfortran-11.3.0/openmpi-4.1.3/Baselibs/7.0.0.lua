@@ -1,7 +1,7 @@
 -- [[
 --
 -- This was built using:
--- $ make -j6 install ESMF_COMM=openmpi ESMF_COMPILER=gfortran prefix=$HOME/installed/MPI/gcc-gfortran-11.3.0/openmpi-4.1.3/Baselibs/7.0.0/Darwin |& tee makeinstall.gcc-gfortran-11.3.0_openmpi-4.1.3.log
+-- $ make -j4 install ESMF_COMM=openmpi ESMF_COMPILER=gfortran prefix=$HOME/installed/MPI/gcc-gfortran-11.3.0/openmpi-4.1.3/Baselibs/7.0.0/Darwin |& tee makeinstall.gcc-gfortran-11.3.0_openmpi-4.1.3.log
 --
 -- NOTE: To build curl on Parcel, I had to do:
 --
