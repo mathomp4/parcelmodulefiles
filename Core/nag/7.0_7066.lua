@@ -72,3 +72,7 @@ prepend_path("MANPATH",nag_mandir)
 
 setenv("NAG_KUSARI_FILE",pathJoin(homedir,"nag.key"))
 
+-- Set MACOSX_DEPLOYMENT_TARGET here as it has issues with Intel, but
+-- you can't just have a pushenv to a blank (as it breaks CMake)
+local sw_vers = subprocess("sw_vers -productVersion")
+pushenv("MACOSX_DEPLOYMENT_TARGET",sw_vers)
