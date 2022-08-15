@@ -67,4 +67,3 @@ local sdk_path = subprocess("xcodebuild -sdk macosx -version Path 2> /dev/null")
 setenv("INTEL_OSXSDK_PATH",sdk_path)
 -- 
 prepend_path("PATH",pathJoin(os.getenv("HOME"),"intelhack"))
-
