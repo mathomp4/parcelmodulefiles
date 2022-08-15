@@ -48,3 +48,8 @@ prepend_path("DYLD_LIBRARY_PATH",pathJoin(pkgdir,"lib"))
 prepend_path("LIBRARY_PATH",pathJoin(pkgdir,"lib"))
 prepend_path("INCLUDE",pathJoin(pkgdir,"include"))
 prepend_path("MANPATH",pathJoin(pkgdir,"share/man"))
+
+-- Set MACOSX_DEPLOYMENT_TARGET here as it has issues with Intel, but
+-- you can't just have a pushenv to a blank (as it breaks CMake)
+local sw_vers = subprocess("sw_vers -productVersion")
+pushenv("MACOSX_DEPLOYMENT_TARGET",sw_vers)
