@@ -15,6 +15,9 @@
 --
 --   make -j4 |& tee make.log
 --   make install |& tee makeinstall.log
+--
+-- NOTE: The check can take a loooong time
+--
 --   make check |& tee makecheck.log
 --
 
