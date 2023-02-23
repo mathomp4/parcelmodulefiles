@@ -4,7 +4,7 @@
 --
 -- This was built using:
 -- $ mkdir build-gcc-gfortran-12.2.0 && cd build-gcc-gfortran-12.2.0
--- $ ../configure --disable-wrapper-rpath --disable-wrapper-runpath CC=gcc CXX=g++ FC=gfortran --prefix=$HOME/installed/Compiler/gcc-gfortran-12.2.0/openmpi/4.1.4 |& tee configure.gcc-gfortran-12.2.0.log
+-- $ ../configure --disable-wrapper-rpath --disable-wrapper-runpath CC=gcc CXX=g++ FC=gfortran --prefix=$HOME/installed/Compiler/gcc-gfortran-12.2.0/openmpi/4.1.5 |& tee configure.gcc-gfortran-12.2.0.log
 -- $ mv config.log config.gcc-gfortran-12.2.0.log
 -- $ make -j4 |& tee make.gcc-gfortran-12.2.0.log
 -- $ make install |& tee makeinstall.gcc-gfortran-12.2.0.log
@@ -17,7 +17,7 @@ prereq("gcc-gfortran/12.2.0")
 
 local compilername = "gcc-gfortran-12.2.0"
 
-local version = "4.1.4"
+local version = "4.1.5"
 local compiler = pathJoin("Compiler",compilername)
 local homedir = os.getenv("HOME")
 local installdir = pathJoin(homedir,"installed")
