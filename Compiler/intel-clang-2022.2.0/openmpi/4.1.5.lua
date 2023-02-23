@@ -3,7 +3,7 @@
 -- This was built using:
 --
 -- $ mkdir build-intel-clang-2022.2.0 && cd build-intel-clang-2022.2.0
--- $ lt_cv_ld_force_load=no ../configure --disable-wrapper-rpath --disable-wrapper-runpath CC=clang CXX=clang++ FC=ifort --prefix=$HOME/installed/Compiler/intel-clang-2022.2.0/openmpi/4.1.4 |& tee configure.intel-clang-2022.2.0.log
+-- $ lt_cv_ld_force_load=no ../configure --disable-wrapper-rpath --disable-wrapper-runpath CC=clang CXX=clang++ FC=ifort --prefix=$HOME/installed/Compiler/intel-clang-2022.2.0/openmpi/4.1.5 |& tee configure.intel-clang-2022.2.0.log
 -- $ mv config.log config.intel-clang-2022.2.0.log
 -- $ make -j6 |& tee make.intel-clang-2022.2.0.log
 -- $ make install |& tee makeinstall.intel-clang-2022.2.0.log
@@ -20,7 +20,7 @@ prereq("intel-clang/"..intel_version)
 
 local compilername = "intel-clang-"..intel_version
 
-local version = "4.1.4"
+local version = "4.1.5"
 local compiler = pathJoin("Compiler",compilername)
 local homedir = os.getenv("HOME")
 local installdir = pathJoin(homedir,"installed")
